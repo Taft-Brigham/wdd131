@@ -11,28 +11,6 @@ year.innerHTML =  `<span class="highlight">${today.getFullYear()}</span>`;
 
 
 
-// This scripts handles the images and how they behave
-
-const hobbies = {
-  hobby1: ["images/coding.png"],
-  hobby2: ["images/dancing.png"],
-  hobby3: ["images/eating.png"],
-  hobby4: ["images/gaming.png"],
-  hobby5: ["images/skating.png"],
-  hobby6: ["images/table tennis.png"]
-};
-
-const indexes = {};
-
-Object.keys(hobbies).forEach(key => {
-  const img = document.getElementById(key);
-  indexes[key] = 0;
-
-  setInterval(() => {
-    img.src = hobbies[key][indexes[key]];
-    indexes[key] = (indexes[key] + 1) % hobbies[key].length;
-  }, 1200);
-});
 
 
 // The following script below makes the portrait image respnsive to the cursor location
