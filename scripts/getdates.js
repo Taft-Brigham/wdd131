@@ -52,3 +52,11 @@ portraitCard.addEventListener("mousemove", (e) => {
 portraitCard.addEventListener("mouseleave", () => {
   portraitCard.style.boxShadow = "10px 10px 20px rgba(202, 188, 188, 0.25)";
 });
+
+
+
+// Get the element where we want to insert the date
+  const lastModifiedParagraph = document.getElementById("lastModified");
+
+  // Use the document.lastModified property
+  lastModifiedParagraph.textContent = "Last modified on: " + document.lastModified;
