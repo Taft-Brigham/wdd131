@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Ezra Essien Taft Brigham Essien</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Ezra Taft Brigham Essien | Home page with personal introduction, projects, and favorite scripture.">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ezra Taft Brigham Essien">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        <nav>
+            <ul  class="navigation">
+                <li><a href="https://www.linkedin.com/in/ezra-essien-7733b4263/" title="linkedin">Linkedin</a></li>
+                <li><a href="https://byupw.instructure.com/" title="Canvas">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/91?lang=eng&id=p11-p12#p11" title="Scripture">Scripture</a></li>
+                <li><a href="#" title="Final Project">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       <!-- Who I am and what I Love to Do -->
+        <h1>Ezra Taft Brigham Essien</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="about-me">
+                <p class="ghana-info glass-box">
+                    My name is Ezra Taft Brigham Essien, and I am passionate about technology, creativity, and learning. I am currently studying Web and Computer Programming 
+                    through the BYU-Pathway program. I enjoy learning how to build modern, interactive websites 
+                    and applying new design techniques. Outside of school, I like mentoring 
+                    others, supporting people with technology, and exploring creative projects that combine 
+                    problem-solving with design.I am also deeply creative and curious. From coding and gaming to skating 
+                    and dancing, I like activities that bring energy, fun, and imagination into my life. 
+                </p>
+
+                <div class="portrait-card">
+                    <img src="images/Ezra-Essien.webp" alt="Ezra Essien Profile Picture" class="portrait">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Ghana -->
+        <section class="card">
+            <h3 class="ghana-title">About Ghana</h3>
+            <div class="about-me">
+                <p class="ghana-info only">
+                    Ghana, located in West Africa, is known for its rich history, diverse culture, and vibrant traditions. 
+                    It is a country with a strong sense of community and hospitality. Ghana boasts beautiful landscapes, 
+                    including stunning beaches along the Atlantic coast, lush rainforests, and picturesque savannahs. 
+                    The country is also famous for its historical landmarks, such as the Cape Coast Castle and the 
+                    Kakum National Park. Ghanaian cuisine is flavorful and diverse, with dishes like jollof rice, 
+                    fufu, and banku being popular staples. The people of Ghana are known for their warmth and friendliness, 
+                    making it a welcoming destination for visitors from around the world.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="card">
+            <!-- What I Love To Do -->
+            <h3 class="hobbies">My Hobbies</h3>
+            <div class="hobbies-gallery">
+                <div class="wrapper">
+                    <img src="images/coding.webp" alt="Coding" id="hobby1">
+                    <span class="hobby-label">Coding</span>
+                </div>
+                <div class="wrapper">
+                    <img src="images/dancing.webp" alt="Dancing" id="hobby2">
+                    <span class="hobby-label">Dancing</span>
+                </div>
+                <div class="wrapper">
+                    <img src="images/eating.webp" alt="Eating" id="hobby3">
+                    <span class="hobby-label">Eating</span>
+                </div>
+                <div class="wrapper">
+                    <img src="images/gaming.webp" alt="Gaming" id="hobby4">
+                    <span class="hobby-label">Gaming</span>
+                </div>
+                <div class="wrapper">
+                    <img src="images/skating.webp" alt="Skating" id="hobby5">
+                    <span class="hobby-label">Skating</span>
+                </div>
+                <div class="wrapper">
+                    <img src="images/table-tennis.webp" alt="Table Tennis" id="hobby6">
+                    <span class="hobby-label">Table Tennis</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+            <!-- useful Dev resources where i get ideas from -->
+    <aside>
+        <h2>Web Dev Resources</h2>
+        <p>Here are some helpful resources I use to learn and improve my web development skills:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> – Comprehensive documentation for HTML, CSS, and JavaScript.</li>
+            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> – Beginner-friendly tutorials and examples.</li>
+            <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> – Tips, guides, and snippets for CSS design.</li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a> – Platform for version control and sharing code projects.</li>
+            <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> – Community Q&A for coding problems and solutions.</li>
+            <li><a href="https://codepen.io/" target="_blank">CodePen</a> – Online code editor and community for front-end developers.</li>
+        </ul>
+    </aside>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> ⛸️ Ezra Taft Brigham Essien ⛸️ Accra, Ghana. </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
 </body>
 </html>

@@ -1,0 +1,311 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+
+
+/* Header and nav */
+header {
+  grid-area: header;
+  padding: 1rem;
+}
+
+
+h1, #course-title {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+header,
+nav,
+main,
+aside,
+footer{
+  /* Inspired By the IOS Liquid Glass Effect */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+.navigation li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: background 0.3s, color 0.3s;
+}
+.navigation li a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #00eaff;
+}
+
+/* Main  Area */
+main {
+  grid-area: main;
+  padding: 2rem;
+  color: #000;
+  background: rgba(255, 255, 255, 0.35); 
+}
+
+/* portrait image styles for responsive feel */
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.about-me p {
+  flex: 2;
+  line-height: 1.6;
+}
+
+.portrait-card {
+  flex: 1;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.2s ease;
+  position: relative;
+}
+
+.portrait-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* h2 headings have the liquid glass effect */
+
+h2 {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+aside {
+  grid-area: aside;
+  padding: 2rem;
+  color: #000;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Paragraph for Ghana info and my information card */
+.ghana-info {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f8f7f7;
+  line-height: 1.8;
+  text-align: center; 
+  font-size: 1.1rem;
+}
+
+.only {
+  position: relative;
+  background: url('../images/ghana5.webp') no-repeat center center / cover;
+}
+
+
+/* Add a subtle hover animation */
+.ghana-info:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+/*---------Ghana Title styles ---------------*/
+.ghana-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: relative;
+  margin: 1rem auto;
+  padding-bottom: 0.3rem;
+  cursor: pointer;
+}
+
+/* Ghana flag underline effect */
+.ghana-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background 0.4s ease-in-out;
+}
+
+/* Ghana flag colors on hover */
+.ghana-title:hover::after {
+  background: linear-gradient(to right, red 33%, yellow 33% 66%, green 66%);
+  border-radius: 2px;
+}
+
+.hobbies{
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 1rem auto;
+  padding-bottom: 0.3rem;
+
+
+}
+
+/*---------Hobbies images styles ---------------*/
+
+/* Gallery Layout */
+.hobbies-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Image Wrapper */
+.wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+  transform: scale(1.05);
+}
+
+/* Hobby Images */
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* shimmer loading */
+  background-color: #ededed;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  ) #ededed;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
+
+/* Glass Hover Overlay */
+.hobby-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #0e0606;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wrapper:hover .hobby-label {
+  opacity: 1;
+}
+
+
+/* Footer */
+footer {
+  grid-area: footer;
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
