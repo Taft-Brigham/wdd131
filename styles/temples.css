@@ -21,7 +21,7 @@ body {
     padding-bottom: 4rem;
 }
 
-/* --- HEADER AND NAVIGATION STYLES (MOBILE FIRST) --- */
+
 
 /* HEADER WITH GLASS EFFECT */
 header {
@@ -31,7 +31,7 @@ header {
     backdrop-filter: var(--backdrop);
     border-bottom: 1px solid var(--glass-border);
     border-radius: 0 0 10px 10px;
-    display: flex; /* Use flex to align H1 and Button */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
@@ -39,22 +39,18 @@ header {
 header h1 {
     text-align: center;
     font-weight: 600;
-    /* By default, H1 is visible */
 }
 
 /* H1 HIDDEN STATE */
 header h1.hidden {
-    display: none; /* Hides H1 when menu is open on small screens */
+    display: none; 
 }
 
-/* NAV - Mobile Menu Default State */
+/* NAV - Mobile  */
 header nav {
-    /* Initially hide the navigation in the mobile view */
     display: none; 
-    
-    /* Position as a full-width dropdown overlay */
     position: absolute;
-    top: 100%; /* Position right below the header */
+    top: 100%; 
     left: 0;
     width: 100%;
     z-index: 10;
@@ -67,7 +63,6 @@ header nav {
 
 /* NAV OPEN STATE */
 header nav.open {
-    /* Show the navigation when the 'open' class is toggled */
     display: block; 
 }
 
