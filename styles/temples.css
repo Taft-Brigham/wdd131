@@ -1,0 +1,160 @@
+/* iOS Liquid Glass Variables */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --backdrop: blur(12px);
+    --accent: #00d4ff; /* Sea blue */
+    --text: #ffffff;
+    --dark: #0e0e0e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: var(--text);
+    padding-bottom: 4rem;
+}
+
+/* --- HEADER AND NAVIGATION STYLES (MOBILE FIRST) --- */
+
+/* HEADER WITH GLASS EFFECT */
+header {
+    position: relative;
+    padding: 1rem;
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop);
+    border-bottom: 1px solid var(--glass-border);
+    border-radius: 0 0 10px 10px;
+    display: flex; /* Use flex to align H1 and Button */
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: 600;
+    /* By default, H1 is visible */
+}
+
+/* H1 HIDDEN STATE */
+header h1.hidden {
+    display: none; /* Hides H1 when menu is open on small screens */
+}
+
+/* NAV - Mobile Menu Default State */
+header nav {
+    /* Initially hide the navigation in the mobile view */
+    display: none; 
+    
+    /* Position as a full-width dropdown overlay */
+    position: absolute;
+    top: 100%; /* Position right below the header */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    
+    /* Inherit glass background for the menu dropdown */
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* NAV OPEN STATE */
+header nav.open {
+    /* Show the navigation when the 'open' class is toggled */
+    display: block; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    padding: 0.5rem 0; 
+}
+
+nav a {
+    display: block;
+    color: var(--text);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+nav a:hover {
+    background: var(--accent);
+    color: black;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    border-left: 3px solid var(--accent);
+    padding-left: 0.5rem;
+}
+
+/* HAMBURGER BUTTON */
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    display: block; 
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* MAIN */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop);
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+}
+
+figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop);
+}

@@ -1,0 +1,64 @@
+/* --- temples-large.css: Styles for Large Views (Override Mobile) --- */
+
+@media (min-width: 700px) {
+
+    /* HEADER */
+    header {
+        display: grid;
+        grid-template-columns: auto 1fr; 
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    /* H1 */
+    header h1,
+    header h1.hidden {
+        display: block; 
+        text-align: left;
+    }
+
+    /* HAMBURGER BUTTON - Hidden on large screens */
+    #menu {
+        display: none; 
+    }
+
+    /* NAV - Displayed as a horizontal */
+    header nav,
+    header nav.open {
+        display: block; 
+        position: static; 
+        width: auto;
+        background: none; 
+        backdrop-filter: none;
+        border: none;
+        padding: 0;
+    }
+
+    /* NAV  */
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end; 
+        gap: 0.5rem; 
+        padding: 0;
+    }
+
+    
+    nav a {
+        padding: 0.5rem 1rem;
+        text-align: left;
+    } 
+
+    
+    nav ul li a.active {
+        
+        border-left: none; 
+        border-bottom: 3px solid var(--accent); 
+        padding-left: 1rem;
+        padding-bottom: 0.5rem; 
+    }
+
+    /* Gallery Layout for large screens */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
