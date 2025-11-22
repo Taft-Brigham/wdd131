@@ -101,6 +101,13 @@ h1 {
 .sun-icon { margin-left: 1rem; font-size: 1.8rem; }
 .weather-card p { margin: 0.8rem 0; font-size: 1.2rem; }
 
+#weather-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem auto;
+    display: block;
+}
+
 .mobile-flag {
     text-align: center;
     padding: 2rem;
@@ -119,18 +126,6 @@ footer {
     margin-top: 2rem;
 }
 
-
-.weather-card h2::after {
-    content: " ☀️";
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-}
-
-.data-card h2::after {
-    content: " 🇬🇭";
-    margin-left: 0.5rem;
-}
-
 footer p::after {
     content: " | Proudly Ghanaian";
     color: var(--gh-gold);
@@ -141,6 +136,11 @@ footer p::after {
 @media (min-width: 768px) {
     .mobile-flag { display: none; }
     .hero-background { min-height: 100vh; }
+    .weather-card h2::after { content: " ☀️"; margin-left: 0.5rem; font-size: 1.8rem; }
+    .data-card h2::after   { content: " 🇬🇭"; margin-left: 0.5rem; }
+    #weather-icon {
+        display: none;
+    }
 }
 
 /* Mobile fallback - stack everything */
