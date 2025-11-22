@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Ghana, the Heart of West Africa. Explore its rich culture, history, and vibrant cities.">
+    <meta name="author" content="Ezra Taft Brigham Essien">
     <title>Ghana | The Heart of West Africa</title>
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,11 +18,27 @@
         <p class="tagline">Land of Gold & Independence</p>
     </header>
 
-    <main class="hero-background">
-        <!-- Background Hero Image -->
+    <main class="hero-container">
+        <!-- Hero Image -->
+         <picture class="hero-picture">
+            <source 
+                srcset="
+                    images/hero-640.webp 640w,
+                    images/hero-1200.webp 1200w,
+                    images/hero-2000.webp 2000w
+                "
+                sizes="(max-width: 32.5em) 100vw, 100vw"
+                type="image/webp">
+            <img 
+                src="images/hero-1200.webp" 
+                alt="Cape Coast Castle at sunset, Ghana" 
+                class="hero-img"
+                loading="lazy">
+        </picture>
+
         <div class="hero-overlay"></div>
 
-        <!-- Country Data Card - Top Left -->
+        <!-- Country Data Card -->
         <section class="data-card glass-card">
             <h2>Data</h2>
             <ul>
@@ -33,7 +53,7 @@
             </ul>
         </section>
 
-        <!-- Weather Card - Bottom Right -->
+        <!-- Weather Card  -->
         <section class="weather-card glass-card">
             <h2>Weather <span class="sun-icon">Sunny</span></h2>
             <p>Temperature: <strong><span id="temp">29</span>°C</strong></p>
