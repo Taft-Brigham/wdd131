@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghana | The Heart of West Africa</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Ghana</h1>
+        <p class="tagline">Land of Gold & Independence</p>
+    </header>
+
+    <main class="hero-background">
+        <!-- Background Hero Image -->
+        <div class="hero-overlay"></div>
+
+        <!-- Country Data Card - Top Left -->
+        <section class="data-card glass-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 238,535 sq km</li>
+                <li><strong>Population:</strong> 34.1 million (2025 est.)</li>
+                <li><strong>Capital:</strong> Accra</li>
+                <li><strong>Languages:</strong> English (official), Twi, Ewe, Ga, Dagbani + more</li>
+                <li><strong>Currency:</strong> Ghanaian Cedi (GHS)</li>
+                <li><strong>Time Zone:</strong> GMT (UTC+0)</li>
+                <li><strong>Calling Code:</strong> +233</li>
+                <li><strong>Internet TLD:</strong> .gh</li>
+            </ul>
+        </section>
+
+        <!-- Weather Card - Bottom Right -->
+        <section class="weather-card glass-card">
+            <h2>Weather <span class="sun-icon">Sunny</span></h2>
+            <p>Temperature: <strong><span id="temp">29</span>°C</strong></p>
+            <p>Conditions: Sunny</p>
+            <p>Wind: <span id="wind">12</span> km/h</p>
+            <p>Feels Like: <span id="chill">N/A</span></p>
+        </section>
+
+        <!-- Flag (centered on mobile, hidden on large screens) -->
+        <div class="mobile-flag">
+            <img src="https://flagcdn.com/gh.svg" alt="Flag of Ghana">
+        </div>
+    </main>
+
+    <footer class="glass-card">
+        <p>© <span id="year"></span> ⛸️ Ezra Taft Brigham Essien ⛸️ Accra, Ghana <br> Last Modification: <span id="modified"></span></p>
+    </footer>
+
+    <script defer src="scripts/place.js"></script>
+</body>
+</html>
