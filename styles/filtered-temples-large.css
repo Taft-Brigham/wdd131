@@ -1,0 +1,47 @@
+@media (min-width: 700px) {
+    /* Hide hamburger, show horizontal nav always */
+    #menu {
+        display: none !important;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 1.5rem 3rem;
+    }
+
+    header h1 {
+        text-align: left;
+    }
+
+    header nav,
+    header nav.open {
+        display: block !important;
+        position: static;
+        background: none;
+        backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+        width: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        padding: 0.6rem 1.2rem;
+        border-radius: 12px;
+    }
+
+    nav a.active {
+        border-left: none;
+        border-bottom: 4px solid var(--accent);
+        background: rgba(0, 212, 255, 0.25);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
