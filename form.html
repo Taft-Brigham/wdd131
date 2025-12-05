@@ -7,7 +7,6 @@
   <meta name="description" content="Product review form for Back to the Future products">
   <meta name="author" content="Ezra Taft Brigham Essien">
   <link rel="stylesheet" href="styles/form.css">
-  <!-- You can add your own favicon and other head items here -->
 </head>
 <body>
   <header>
@@ -21,10 +20,10 @@
       <label for="product">Product Name <span class="required">*</span></label>
       <select id="product" name="product" required>
         <option value="" disabled selected>Select a Product ...</option>
-        <!-- Options will be added by JavaScript -->
+        <!-- Options added by JavaScript -->
       </select>
 
-      <!-- Overall Rating - Radio Stars -->
+      <!-- Rating Stars -->
       <fieldset>
         <legend>Overall Rating <span class="required">*</span></legend>
         <div class="rating">
@@ -52,11 +51,13 @@
       <!-- Useful Features - Checkboxes -->
       <fieldset>
         <legend>Useful Features (check all that apply)</legend>
-        <label><input type="checkbox" name="features" value="easy-install"> Easy Installation</label>
-        <label><input type="checkbox" name="features" value="durable"> Durable Build</label>
-        <label><input type="checkbox" name="features" value="fast-performance"> Fast Performance</label>
-        <label><input type="checkbox" name="features" value="great-support"> Great Customer Support</label>
-        <label><input type="checkbox" name="features" value="time-travel"> Time Travel Capability</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="features" value="easy-install"> Easy Installation</label>
+          <label><input type="checkbox" name="features" value="durable"> Durable Build</label>
+          <label><input type="checkbox" name="features" value="fast-performance"> Fast Performance</label>
+          <label><input type="checkbox" name="features" value="great-support"> Great Customer Support</label>
+          <label><input type="checkbox" name="features" value="time-travel"> Time Travel Capability</label>
+        </div>
       </fieldset>
 
       <!-- Written Review -->
@@ -74,9 +75,10 @@
 
   <footer>
     <!-- Your common footer here -->
-    <p>&copy;2025 <span id="year"></span> | Ezra Taft Brigham Essien | WDD131</p>
+    <p>&copy;2025 <span id="year"></span> ⛸️ Ezra Taft Brigham Essien ⛸️ WDD131</p>Ghana<br>
+    <P id="lastModified"></P>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="scripts/form.js"></script>
 </body>
 </html>
