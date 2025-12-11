@@ -1,11 +1,11 @@
-/* wdd131/project/css/styles.css */
+
 :root {
-    --primary: #1E3A8A;      /* Deep navy from your live site */
-    --accent: #3B82F6;       /* Bright blue buttons */
-    --light: #DBEAFE;        /* Very light blue background */
-    --dark: #111827;         /* Almost black text */
+    --primary: #1E3A8A;     
+    --accent: #3B82F6;       
+    --light: #DBEAFE;        
+    --dark: #111827;         
     --white: #FFFFFF;
-    --success: #10B981;      /* Green tags */
+    --success: #10B981;      
     --gray: #6B7280;
     --border: #D1D5DB;
 }
