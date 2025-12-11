@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Post remote job listings for free on RemoteMarket – reach thousands of talented students and recent graduates.">
+  <meta name="author" content="Ezra Taft Brigham Essien" >
+  <title>For Employers — RemoteMarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/RM.css">
+</head>
+<body>
+
+  <header>
+  <nav>
+    <button class="hamburger" aria-label="Open menu">Menu</button>
+    <ul id="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="profile.html">Profile Builder</a></li>
+      <li><a href="employers.html">For Employers</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <section class="hero" style="padding:4rem 1rem;">
+      <h1>Post a Remote Job – It's Free</h1>
+      <p class="subtitle">Reach thousands of motivated students & recent graduates looking for remote work.</p>
+    </section>
+
+    <section class="contact-form">
+      <h2>Submit Your Job Listing</h2>
+      <p class="subtitle">We review every posting and publish within 24 hours.</p>
+
+      <form action="https://formsubmit.co/your-email@example.com" method="POST">
+        <div class="form-grid">
+          <div>
+            <label for="company">Company Name *</label>
+            <input type="text" id="company" name="company" required placeholder="Acme Inc.">
+          </div>
+          <div>
+            <label for="website">Company Website</label>
+            <input type="url" id="website" name="website" placeholder="https://acme.com">
+          </div>
+          <div>
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+          <div>
+            <label for="email">Work Email *</label>
+            <input type="email" id="email" name="email" required placeholder="john@acme.com">
+          </div>
+          <div class="full-width">
+            <label for="job-title">Job Title *</label>
+            <input type="text" id="job-title" name="job_title" required placeholder="Junior Frontend Developer (Remote)">
+          </div>
+          <div>
+            <label for="type">Job Type *</label>
+            <select id="type" name="job_type" required>
+              <option value="">Select...</option>
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Internship</option>
+              <option>Contract</option>
+            </select>
+          </div>
+          <div>
+            <label for="salary">Salary Range (optional)</label>
+            <input type="text" id="salary" name="salary" placeholder="$50k–$80k or $20–30/hr">
+          </div>
+          <div class="full-width">
+            <label for="description">Job Description *</label>
+            <textarea id="description" name="description" rows="8" required placeholder="Tell us about the role, required skills, and how to apply..."></textarea>
+          </div>
+          <div class="full-width">
+            <label for="apply">How to Apply *</label>
+            <input type="text" id="apply" name="how_to_apply" required placeholder="Email: jobs@acme.com or link">
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2rem;">
+          <button type="submit" class="btn">Submit Job Listing – Free</button>
+        </div>
+
+        <!-- FormSubmit hidden fields (no captcha needed, but keeps spam low) -->
+        <input type="hidden" name="_subject" value="New Job Submission – RemoteMarket">
+        <input type="hidden" name="_next" value="https://yourusername.github.io/wdd131/project/thanks.html">
+        <input type="hidden" name="_template" value="table">
+      </form>
+    </section>
+  </main>
+
+ <footer>
+        <p>© 2025 RemoteMarket — Helping students go remote</p>
+        <p><a href="references.html">Image & Content References</a></p>
+        <span id="currentyear"></span> | Ezra Taft Brigham Essien | Accra, Ghana. </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="/scripts/Jobs.js"></script>
+  <script src="/scripts/jobs-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* wdd131/project/css/styles.css */
+:root {
+    --primary: #1E3A8A;      /* Deep navy from your live site */
+    --accent: #3B82F6;       /* Bright blue buttons */
+    --light: #DBEAFE;        /* Very light blue background */
+    --dark: #111827;         /* Almost black text */
+    --white: #FFFFFF;
+    --success: #10B981;      /* Green tags */
+    --gray: #6B7280;
+    --border: #D1D5DB;
+}
+
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+}
+
+main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: var(--light);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.hero p { font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem; }
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.btn:hover { background: #2563eb; }
+
+.featured {
+    margin-top: 3rem;
+}
+
+.featured h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.job-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.job-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.job-card h3 { margin: 0 0 0.5rem; color: var(--primary); }
+.company { color: var(--gray); font-size: 0.95rem; }
+
+.tag {
+    display: inline-block;
+    background: var(--success);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin: 0.5rem 0.5rem 0 0;
+}
+
+
+/* Profile page styles STARTS*/
+.profile-form {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.profile-form label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.profile-card {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.profile-card h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--dark);
+}
+
+/* Profile page styles END */
+
+
+
+
+/* Employers / Contact form specific */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid var(--border);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form p.subtitle {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .form-grid { grid-template-columns: 1fr 1fr; }
+  .full-width { grid-column: 1 / -1; }
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.contact-form button {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+/* Employers Page END */
+
+
+
+/* Responsive Navigation */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--primary);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    transition: left 0.4s ease;
+  }
+
+  nav ul.open {
+    left: 0;
+  }
+
+  nav a {
+    font-size: 1.4rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a:hover,
+  nav a.active {
+    background: rgba(255,255,255,0.1);
+    border-bottom: none;
+  }
+}
+
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+footer a { color: #93c5fd; }
+
+/* Responsive */
+@media (min-width: 768px) {
+    .hero h1 { font-size: 3.5rem; }
+    .job-grid { grid-template-columns: repeat(3, 1fr); }
+}

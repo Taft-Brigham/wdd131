@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Build a beautiful shareable remote-work profile in seconds – perfect for students applying to remote jobs.">
+  <meta name="author" content="Ezra Taft Brigham Essien" >
+  <title>Profile Builder — RemoteMarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/RM.css">
+</head>
+<body>
+
+  <header>
+  <nav>
+    <button class="hamburger" aria-label="Open menu">Menu</button>
+    <ul id="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="profile.html">Profile Builder</a></li>
+      <li><a href="employers.html">For Employers</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <section class="hero" style="margin-bottom:0;">
+      <h1>Build Your Remote Profile</h1>
+      <p>Create a clean, shareable one-page profile in seconds — perfect for remote job applications.</p>
+    </section>
+
+    <div class="profile-form">
+      <form id="profile-form">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" required placeholder="Jane Doe">
+
+        <label for="title">Current Title / Goal</label>
+        <input type="text" id="title" placeholder="Computer Science Student | Aspiring Frontend Developer">
+
+        <label for="bio">Short Bio (2–3 sentences)</label>
+        <textarea id="bio" rows="4" placeholder="I'm a motivated CS student passionate about React and remote work..."></textarea>
+
+        <label for="github">GitHub URL</label>
+        <input type="url" id="github" placeholder="https://github.com/janedoe">
+
+        <label for="linkedin">LinkedIn URL</label>
+        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/janedoe">
+
+        <label for="skills">Skills (comma separated)</label>
+        <input type="text" id="skills" placeholder="React, JavaScript, Figma, Python">
+
+        <div style="margin-top:2rem; text-align:center;">
+          <button type="submit" class="btn" id="generate-btn">Generate Profile</button>
+          <button type="button" class="btn" id="save-btn" style="background:#10B981; margin-left:1rem;">Save to Browser</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="profile-output" style="min-height:200px;"></div>
+  </main>
+
+ <footer>
+        <p>© 2025 RemoteMarket — Helping students go remote</p>
+        <p><a href="references.html">Image & Content References</a></p>
+        <span id="currentyear"></span> | Ezra Taft Brigham Essien | Accra, Ghana. </p>
+        <p id="lastModified"></p>
+    </footer>
+
+  <script src="/scripts/profile.js"></script>
+  <script src="/scripts/Jobs.js"></script>
+  <script src="/scripts/jobs-page.js"></script>
+</body>
+</html>

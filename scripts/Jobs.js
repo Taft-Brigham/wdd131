@@ -1,0 +1,220 @@
+// js/jobs.js
+
+// js/hamburger.js  (or add to any existing JS file)
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  document.getElementById("nav-menu");
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      hamburger.textContent = navMenu.classList.contains("open") ? "Close" : "Menu";
+    });
+
+    // Close menu when clicking a link
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        hamburger.textContent = "Menu";
+      });
+    });
+  }
+});
+
+
+const allJobs = [
+  { id: 1,  title: "Junior Frontend Developer",      company: "Vercel",          location: "Worldwide", type: "Internship",    category: "Engineering",   salary: "$20–30/hr",  tags: ["React", "Next.js"],          featured: true },
+  { id: 2,  title: "UX Design Intern",               company: "Figma",           location: "Worldwide", type: "Internship",    category: "Design",        salary: "Unpaid/Paid", tags: ["Figma", "UI"],               featured: true },
+  { id: 3,  title: "Marketing Assistant",            company: "Notion",         location: "Remote",    type: "Part-time",     category: "Marketing",     salary: "$18–25/hr",  tags: ["Social Media"],              featured: true },
+  { id: 4,  title: "Customer Support Rep",           company: "Intercom",        location: "Remote",    type: "Full-time",     category: "Support",       salary: "$45k–55k",   tags: ["Entry-level"],               featured: false },
+  { id: 5,  title: "Content Writer",                 company: "ConvertKit",      location: "Remote",    type: "Part-time",     category: "Marketing",     salary: "$22/hr",     tags: ["Writing"],                   featured: true },
+  { id: 6,  title: "Backend Engineer Intern",        company: "Supabase",        location: "Worldwide", type: "Internship",    category: "Engineering",   salary: "$25–35/hr",  tags: ["Node.js", "PostgreSQL"],     featured: false },
+  { id: 7,  title: "Product Design Intern",          company: "Linear",          location: "Remote",    type: "Internship",    category: "Design",        salary: "Paid",       tags: ["Product"],                   featured: true },
+  { id: 8,  title: "Data Analyst (Entry-level)",     company: "Stripe",          location: "Remote",    type: "Full-time",     category: "Data",          salary: "$70k–90k",   tags: ["SQL", "Excel"],              featured: false },
+  { id: 9,  title: "Community Manager",              company: "Discord",         location: "Remote",    type: "Full-time",     category: "Marketing",     salary: "$60k–80k",   tags: ["Community"],                 featured: false },
+  { id: 10, title: "Graphic Design Intern",          company: "Canva",           location: "Worldwide", type: "Internship",    category: "Design",        salary: "Paid",       tags: ["Photoshop", "Illustrator"],  featured: true },
+    { id: 11, title: "Virtual Assistant",              
+    company: "Belay",           
+    location: "Remote",    
+    type: "Part-time",     
+    category: "Admin",     
+    salary: "$15–22/hr",     
+    tags: ["Admin Tasks", "Email"],    
+    featured: false },
+
+  { id: 12, title: "Junior Web Developer",           
+    company: "Hostinger",       
+    location: "Remote",    
+    type: "Full-time",     
+    category: "Engineering",   
+    salary: "$45k–60k",    
+    tags: ["HTML", "CSS", "JavaScript"],  
+    featured: true },
+
+  { id: 13, title: "Social Media Manager",           
+    company: "Hootsuite",       
+    location: "Remote",    
+    type: "Part-time",     
+    category: "Marketing",     
+    salary: "$20–28/hr",   
+    tags: ["Social Media", "Content"],    
+    featured: false },
+
+  { id: 14, title: "Junior Data Entry Assistant",    
+    company: "Upwork",          
+    location: "Worldwide", 
+    type: "Contract",      
+    category: "Admin",     
+    salary: "$12–18/hr",   
+    tags: ["Typing", "Data"],     
+    featured: false },
+
+  { id: 15, title: "QA Tester (Entry-level)",        
+    company: "PlayStation",     
+    location: "Remote",    
+    type: "Full-time",     
+    category: "Engineering",   
+    salary: "$40k–55k",    
+    tags: ["Testing", "Bugs"],        
+    featured: true },
+
+  { id: 16, title: "Email Marketing Assistant",      
+    company: "Mailchimp",       
+    location: "Remote",    
+    type: "Part-time",     
+    category: "Marketing",     
+    salary: "$20–30/hr",   
+    tags: ["Email", "Campaigns"],      
+    featured: false },
+
+  { id: 17, title: "Junior Project Coordinator",     
+    company: "Asana",           
+    location: "Remote",    
+    type: "Full-time",     
+    category: "Management",  
+    salary: "$50k–65k",    
+    tags: ["Coordination"],       
+    featured: false },
+
+  { id: 18, title: "SEO Assistant",                  
+    company: "HubSpot",        
+    location: "Remote",    
+    type: "Internship",    
+    category: "Marketing",     
+    salary: "$18–25/hr",   
+    tags: ["SEO", "Analytics"],     
+    featured: true },
+
+  { id: 19, title: "IT Support Technician",          
+    company: "Dell",            
+    location: "Remote",    
+    type: "Full-time",     
+    category: "Support",       
+    salary: "$45k–60k",    
+    tags: ["Troubleshooting"],  
+    featured: false },
+
+  { id: 20, title: "Junior Copywriter",              
+    company: "Shopify",         
+    location: "Remote",    
+    type: "Part-time",     
+    category: "Writing",     
+    salary: "$20–32/hr",   
+    tags: ["Copywriting"],       
+    featured: true },
+      { id: 21, title: "Junior Cloud Support Associate",
+    company: "AWS",
+    location: "Remote",
+    type: "Full-time",
+    category: "Engineering",
+    salary: "$55k–70k",
+    tags: ["Cloud", "AWS"],
+    featured: false },
+
+  { id: 22, title: "Research Assistant (Remote)",
+    company: "MIT Open Learning",
+    location: "Worldwide",
+    type: "Part-time",
+    category: "Research",
+    salary: "$18–25/hr",
+    tags: ["Research", "Writing"],
+    featured: false },
+
+  { id: 23, title: "Junior Mobile Developer",
+    company: "Expo",
+    location: "Remote",
+    type: "Full-time",
+    category: "Engineering",
+    salary: "$50k–75k",
+    tags: ["React Native"],
+    featured: true },
+
+  { id: 24, title: "Operations Assistant",
+    company: "Airtable",
+    location: "Remote",
+    type: "Part-time",
+    category: "Operations",
+    salary: "$20–27/hr",
+    tags: ["Operations", "Entry-level"],
+    featured: false },
+
+  { id: 25, title: "Technical Support Intern",
+    company: "GitHub",
+    location: "Worldwide",
+    type: "Internship",
+    category: "Support",
+    salary: "$22–30/hr",
+    tags: ["Git", "Tech Support"],
+    featured: true },
+
+  { id: 26, title: "Finance Analyst Intern",
+    company: "Remote.com",
+    location: "Remote",
+    type: "Internship",
+    category: "Finance",
+    salary: "Paid",
+    tags: ["Excel", "Analytics"],
+    featured: false },
+
+  { id: 27, title: "Customer Success Assistant",
+    company: "Aweber",
+    location: "Remote",
+    type: "Full-time",
+    category: "Support",
+    salary: "$45k–60k",
+    tags: ["Customer Success"],
+    featured: false },
+
+  { id: 28, title: "Video Editor (Entry-level)",
+    company: "Loom",
+    location: "Remote",
+    type: "Part-time",
+    category: "Media",
+    salary: "$18–28/hr",
+    tags: ["Editing", "Premiere Pro"],
+    featured: true },
+
+  { id: 29, title: "Junior Cybersecurity Analyst",
+    company: "Cloudflare",
+    location: "Remote",
+    type: "Full-time",
+    category: "Security",
+    salary: "$60k–85k",
+    tags: ["Security", "Monitoring"],
+    featured: false },
+
+  { id: 30, title: "Administrative Coordinator",
+    company: "Zapier",
+    location: "Remote",
+    type: "Full-time",
+    category: "Admin",
+    salary: "$45k–58k",
+    tags: ["Admin", "Scheduling"],
+    featured: true },
+
+];
+
+
+
