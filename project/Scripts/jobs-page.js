@@ -53,3 +53,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial render
   renderJobs(allJobs);
 });
+
